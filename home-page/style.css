@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100&display=swap");
+body {
+  background-color: rgb(234, 227, 234);
+  color: black;
+  display: flex;
+  font-family: "Hahmlet", serif;
+  font-size: 25px;
+  margin: 20px;
+}
+
+ul {
+  margin: 5px;
+  list-style-type: none;
+  margin: 0;
+  text-align: center;
+  margin-top: 10%;
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  margin-right: 45px;
+}
+
+a {
+  font-size: 20px;
+  color: #584e4a;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 8px;
+}
+
+.hover-underline {
+  display: inline-block;
+  position: relative;
+}
+.hover-underline:hover {
+  cursor: pointer;
+}
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(231, 51, 27);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline:hover::after {
+  transform: scaleX(1.2);
+  transform-origin: bottom left;
+}
+
+a:before,
+a:after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #f37272;
+}
+
+a:before {
+  opacity: 0;
+  -webkit-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  transform: translateY(-8px);
+  -webkit-transition: -webkit-transform 0s
+      cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0s;
+  transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+}
+
+a:after {
+  opacity: 0;
+  -webkit-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition: -webkit-transform 0.2s
+      cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.2s;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.2s;
+}
+
+a:hover:before,
+a:hover:after,
+a:focus:before,
+a:focus:after {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+a:hover:before,
+a:focus:before {
+  -webkit-transition: -webkit-transform 0.2s
+      cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.2s;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.2s;
+}
+
+a:hover:after,
+a:focus:after {
+  -webkit-transition: -webkit-transform 0s 0.2s
+      cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0s 0.2s;
+  transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0s 0.2s;
+}
+
+.portrait {
+  /* padding: 50px 75vh 50vh 100px; */
+  float: left;
+  margin-right: 2rem;
+}

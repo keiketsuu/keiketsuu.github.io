@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100&display=swap");
+body {
+  background-color: rgb(234, 227, 234);
+  color: black;
+  font-family: "Hahmlet", serif;
+  font-size: 25px;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.one {
+  align-items: center;
+}
